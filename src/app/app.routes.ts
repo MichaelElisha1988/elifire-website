@@ -31,4 +31,8 @@ export const routes: Routes = [
     path: 'contact-me',
     component: ContactMeComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'home',
+  },
 ];
