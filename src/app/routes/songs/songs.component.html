@@ -47,15 +47,15 @@
   }
 
   <div class="selection-section">
-    <button (click)="prev()">prev</button>
-    <button (click)="next()">next</button>
+    <button (click)="prev()">קודם</button>
+    <button (click)="next()">הבא</button>
   </div>
 
   <a
     class="title"
     (click)="navTo('support-artist')"
     (click)="navTo('support-artist')"
-    >-Support Artist-</a
+    >-תמוך באמן-</a
   >
   <!-- ElifireAdUnits -->
   <ins
@@ -96,7 +96,9 @@
   </script>
   <!-- END ElifireAdUnits -->
   @if(listOfActiveIframe[$index] && item[1] && isMobile){
-  <a class="download" href="{{ item[1] }}" download="newfilename">-Download-</a>
+  <a class="download" href="{{ item[1] }}" download="newfilename"
+    >-הורדה ישירה-</a
+  >
   } }
   <!-- ElifireAdUnits -->
   <ins
