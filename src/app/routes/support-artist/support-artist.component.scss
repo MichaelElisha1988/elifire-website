@@ -1,0 +1,20 @@
+section {
+  width: min(80%, 420px);
+  margin: 0 auto;
+  .info {
+    p {
+      margin-top: 20px;
+      text-align: center;
+      letter-spacing: 3px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding-bottom: 15px;
+      &:last-child {
+        border: none;
+        margin-bottom: 30px;
+      }
+      a {
+        color: rgb(255, 136, 0);
+      }
+    }
+  }
+}

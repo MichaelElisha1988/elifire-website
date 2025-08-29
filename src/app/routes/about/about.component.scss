@@ -1,0 +1,46 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .selecction-lan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+
+    button {
+      width: 55px;
+      height: 55px;
+      background: transparent;
+      border-radius: 50%;
+      border: 1px rgba(128, 128, 128, 0.771) solid;
+      cursor: pointer;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        border: 1px aquamarine solid;
+      }
+    }
+  }
+  .about-options {
+    width: min(90%, 600px);
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 125%;
+    font-size: 22px;
+    color: rgba(128, 128, 128, 0.819);
+    .lan {
+      padding-bottom: 25px;
+      &.rus {
+        display: block;
+      }
+      &.heb {
+        display: block;
+      }
+      &.eng {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,1 +1,114 @@
-<p>songs works!</p>
+<section class="songs">
+  <div class="count">
+    <span class="onNow">{{ ActiveIframe + 1 }}</span> /
+    {{ listOfActiveIframe.length }}
+  </div>
+  <!-- ElifireAdUnits -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-4086762240008321"
+    data-ad-slot="8523148039"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <!-- END ElifireAdUnits -->
+  @for (item of listOfIframeId; track $index) { @if(listOfActiveIframe[$index]
+  && item[0]){
+  <iframe
+    [width]="isMobile ? '360' : '640'"
+    [height]="isMobile ? '180' : '360'"
+    [src]="item[0] | youtube : 'resourceUrl'"
+    id="myFrame"
+    title="YouTube video player"
+    frameborder="1"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+  }
+  <!-- ElifireAdUnits -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-4086762240008321"
+    data-ad-slot="8523148039"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <!-- END ElifireAdUnits -->
+
+  }
+
+  <div class="selection-section">
+    <button (click)="prev()">prev</button>
+    <button (click)="next()">next</button>
+  </div>
+
+  <a
+    class="title"
+    (click)="navTo('support-artist')"
+    (click)="navTo('support-artist')"
+    >-Support Artist-</a
+  >
+  <!-- ElifireAdUnits -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-4086762240008321"
+    data-ad-slot="8523148039"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <!-- END ElifireAdUnits -->
+  @for (item of listOfIframeId; track $index) { @if(listOfActiveIframe[$index]
+  && item[1]){
+  <iframe
+    class="pdf-lyrics"
+    [src]="item[1] | youtube : 'resourceUrl'"
+    [width]="isMobile ? '360' : '640'"
+    type="application/pdf"
+    height="600px"
+    loading="lazy"
+    title="PDF-file"
+  ></iframe>
+  }
+  <!-- ElifireAdUnits -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-4086762240008321"
+    data-ad-slot="8523148039"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <!-- END ElifireAdUnits -->
+  @if(listOfActiveIframe[$index] && item[1] && isMobile){
+  <a class="download" href="{{ item[1] }}" download="newfilename">-Download-</a>
+  } }
+  <!-- ElifireAdUnits -->
+  <ins
+    class="adsbygoogle"
+    style="display: block"
+    data-ad-client="ca-pub-4086762240008321"
+    data-ad-slot="8523148039"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  <!-- END ElifireAdUnits -->
+</section>

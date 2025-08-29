@@ -34,11 +34,11 @@ export class HeaderComponent {
       route: 'songs',
       isActive: false,
     },
-    {
-      title: 'תרגומים',
-      route: 'translations',
-      isActive: false,
-    },
+    // {
+    //   title: 'תרגומים',
+    //   route: 'translations',
+    //   isActive: false,
+    // },
     {
       title: 'אודות',
       route: 'about',
@@ -49,11 +49,11 @@ export class HeaderComponent {
       route: 'support-artist',
       isActive: false,
     },
-    {
-      title: 'צור קשר',
-      route: 'contact-me',
-      isActive: false,
-    },
+    // {
+    //   title: 'צור קשר',
+    //   route: 'contact-me',
+    //   isActive: false,
+    // },
   ];
 
   onNav(item: SiteRoutes) {

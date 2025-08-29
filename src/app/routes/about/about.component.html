@@ -1,1 +1,56 @@
-<p>about works!</p>
+<section>
+  <div class="selecction-lan">
+    <button class="b-rus" (click)="selectedLanguage = 'rus'">rus</button>
+    <button class="b-heb" (click)="selectedLanguage = 'heb'">heb</button>
+    <button class="b-eng" (click)="selectedLanguage = 'eng'">eng</button>
+  </div>
+  <div class="about-options">
+    @switch (selectedLanguage) { @case ('rus'){
+    <p class="lan rus" @fadeInOut>
+      Приветствую! Я Михаил Элифайер, преданный певец и переводчик, который
+      вдохновляет новую жизнь в песни, переводя их на иврит. Мое музыкальное
+      путешествие было глубоким и волнующим приключением, позволившим мне
+      привнести свежую энергию в вечные мелодии и трогательные тексты. Я твердо
+      верю в трансцендентную силу музыки, которая соединяет культуры, объединяет
+      людей и связывает страны. Через свои переводы и выступления я стремлюсь
+      строить мосты между разнообразными сообществами, способствуя глубокому
+      пониманию и признанию нашей общей человечности. Моя музыка - это полотно
+      историй, эмоций и опыта, которые находят отклик у слушателей всех
+      жизненных путей. Независимо от того, привлекают ли вас душевные
+      интерпретации любимых классических произведений или инновационные версии
+      современных хитов, моя цель - принести вам радость и чувство связи через
+      каждую ноту. Отправьтесь в это очаровательное музыкальное путешествие
+      вместе со мной, и давайте вместе праздновать универсальный язык музыки.
+    </p>
+    } @case ('heb'){
+    <p class="lan heb" @fadeInOut>
+      שלום! אני מיכאל אליפייר, זמר ומתרגם שמכניס חיים חדשים לשירים על ידי תרגומם
+      לעברית. המסע המוזיקלי שלי היה חוויה עמוקה ומרגשת, שאפשרה לי להעניק
+      למנגינות ולמילים הנוגעות ללב רעננות מחודשת. אני מאמין בכוח הטרנסצנדנטי של
+      המוזיקה לגשר על תרבויות, לאחד אנשים ולחבר בין מדינות. באמצעות התרגומים
+      והביצועים שלי, אני שואף לבנות גשרים בין קהילות מגוונות, לטפח הבנה והערכה
+      עמוקה יותר לאנושיות המשותפת שלנו. המוזיקה שלי היא מארג של סיפורים, רגשות
+      וחוויות המהדהדים בקרב מאזינים מכל תחומי החיים. בין אם אתם נמשכים לפרשנויות
+      הנשמה של הקלאסיקות האהובות או לביצועים החדשניים של להיטים עכשוויים, המטרה
+      שלי היא להביא לכם שמחה ותחושת חיבור בכל תו.
+    </p>
+    } @case ('eng'){
+    <p class="lan eng" @fadeInOut>
+      Greetings! I am Michael Elifire, a devoted singer and translator who
+      breathes new life into songs by rendering them in Hebrew. My musical
+      journey has been a profound and exhilarating adventure, allowing me to
+      infuse timeless melodies and poignant lyrics with fresh vitality. I am a
+      firm believer in the transcendent power of music to bridge cultures, unite
+      people, and connect countries. Through my translations and performances, I
+      aspire to build bridges between diverse communities, fostering a deeper
+      understanding and appreciation of our shared humanity. My music is a
+      tapestry of stories, emotions, and experiences that resonate with
+      listeners from all walks of life. Whether you are drawn to the soulful
+      reinterpretations of beloved classics or the innovative renditions of
+      contemporary hits, my goal is to bring you joy and a sense of connection
+      through every note. Embark on this enchanting musical journey with me, and
+      together, let's celebrate the universal language of music.
+    </p>
+    } }
+  </div>
+</section>
