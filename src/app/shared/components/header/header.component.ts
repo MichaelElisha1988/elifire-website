@@ -17,6 +17,7 @@ export interface SiteRoutes {
 })
 export class HeaderComponent {
   private readonly router = inject(Router);
+  selectedIndex = 0;
 
   constructor() {
     this.activateHeader();
@@ -24,32 +25,32 @@ export class HeaderComponent {
 
   listOfRoutes: SiteRoutes[] = [
     {
-      title: 'home',
+      title: 'בית',
       route: 'home',
       isActive: false,
     },
     {
-      title: 'songs',
+      title: 'שירים',
       route: 'songs',
       isActive: false,
     },
-    // {
-    //   title: 'translations',
-    //   route: 'translations',
-    //   isActive: false,
-    // },
     {
-      title: 'about',
+      title: 'תרגומים',
+      route: 'translations',
+      isActive: false,
+    },
+    {
+      title: 'אודות',
       route: 'about',
       isActive: false,
     },
     {
-      title: 'support artist',
+      title: 'תמוך באמן',
       route: 'support-artist',
       isActive: false,
     },
     {
-      title: 'contact me',
+      title: 'צור קשר',
       route: 'contact-me',
       isActive: false,
     },
