@@ -21,6 +21,10 @@ export class HomeComponent {
     this.router.navigate([route]);
   }
 
+  constructor() {
+    this.isMobile = window.innerWidth < 640;
+  }
+
   readonly listOfIframeId: string[][] = [
     ['https://www.youtube.com/embed/2kroXbXTkGg'],
   ];
