@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { YoutubePipe } from '../../shared/pipes/youtube.pipe';
 export interface translation {
   artist: string;
   fromWere: string;
@@ -8,15 +9,42 @@ export interface translation {
 }
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [YoutubePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   private readonly router = inject(Router);
+  ActiveIframe: number = 0;
+  isMobile: boolean = false;
   navTo(route: string) {
     this.router.navigate([route]);
   }
+
+  readonly listOfIframeId: string[][] = [
+    ['https://www.youtube.com/embed/2kroXbXTkGg'],
+  ];
+  listOfActiveIframe: boolean[] = [false];
+
+  next() {
+    this.listOfActiveIframe.fill(false);
+    this.ActiveIframe++;
+    this.ActiveIframe > this.listOfActiveIframe.length - 1
+      ? (this.ActiveIframe = 0)
+      : '';
+
+    this.listOfActiveIframe[this.ActiveIframe] = true;
+  }
+  prev() {
+    this.listOfActiveIframe.fill(false);
+    this.ActiveIframe--;
+    this.ActiveIframe < 0
+      ? (this.ActiveIframe = this.listOfActiveIframe.length - 1)
+      : '';
+
+    this.listOfActiveIframe[this.ActiveIframe] = true;
+  }
+
   translationsSongList: translation[] = [
     {
       artist: 'Анжелика Варум',

@@ -36,12 +36,7 @@
     <button (click)="next()">הבא</button>
   </div>
 
-  <a
-    class="title"
-    (click)="navTo('support-artist')"
-    (click)="navTo('support-artist')"
-    >-תמוך באמן-</a
-  >
+  <a class="title" (click)="navTo('support-artist')">-תמוך באמן-</a>
 
   @for (item of listOfIframeId; track $index) { @if(listOfActiveIframe[$index]
   && item[1]){

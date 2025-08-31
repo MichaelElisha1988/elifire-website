@@ -7,6 +7,27 @@
   <div class="title">-מיכאל אליפייר-</div>
 
   <div class="comingUp">
+    <div class="title">-שירים מקוריים-</div>
+    @for (item of listOfIframeId; track $index) { @if(ActiveIframe === $index){
+    <iframe
+      [width]="isMobile ? '360' : '640'"
+      [height]="isMobile ? '180' : '360'"
+      [src]="item[0] | youtube : 'resourceUrl'"
+      id="myFrame"
+      title="YouTube video player"
+      frameborder="1"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    } } @if(listOfIframeId.length > 1){
+    <div class="selection-section">
+      <button (click)="prev()">קודם</button>
+      <button (click)="next()">הבא</button>
+    </div>
+    }
+
+    <a class="title" (click)="navTo('support-artist')">-תמוך באמן-</a>
     <div class="title">-תרגומים בעבודה-</div>
     @for (item of translationsSongList; track $index) {
     <p class="item-comingUp">
