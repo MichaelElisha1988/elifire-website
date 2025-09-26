@@ -26,7 +26,9 @@ export class HomeComponent {
   }
 
   readonly listOfIframeId: string[][] = [
-    ['https://www.youtube.com/embed/2kroXbXTkGg'],
+    [
+      'https://open.spotify.com/embed/track/25VqRRaV8U5G3hGu6eXc70?utm_source=generator',
+    ],
   ];
   listOfActiveIframe: boolean[] = [false];
 
