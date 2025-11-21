@@ -23,11 +23,14 @@
         box-shadow: 0 0 15px lightblue;
         transform: scale(1.05);
       }
+      &:has(a.active) {
+        border: 1px solid rgba(127, 255, 212, 0.854);
+      }
       a {
         text-decoration: none;
         color: gray;
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: 16px;
         pointer-events: none;
 
         &.active {
